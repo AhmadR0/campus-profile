@@ -26,12 +26,12 @@ export const HadersMain = () => {
                     <img
                         src={logo}
                         alt="Logo"
-                        width={60}
-                        height={60}
+                        width={70}
+                        height={70}
                         className="object-contain"
                     />
                     <span className="text-xl font-bold tracking-wide uppercase">
-                        Politeknik Cendrawasih Palu
+                        Politeknik <br></br>Cendrawasih Palu
                     </span>
                 </div>
 

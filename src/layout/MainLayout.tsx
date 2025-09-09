@@ -1,6 +1,6 @@
 // import type { ReactNode } from "react";
 import { HeaderMain } from "../components/Headers";
-// import Footers from "../components/Footers";
+import Footers from "../components/Footers";
 import MainContents from "../components/MainContents";
 
 
@@ -16,7 +16,7 @@ export default function MainLayout() {
       <MainContents />
 
       {/* Footer */}
-      {/* <Footers /> */}
+      <Footers />
     </div>
   );
 }

@@ -9,9 +9,10 @@ export default function MainContents() {
   return (
      <main className="flex-1">
       <Hero />
-      <Highlights />
-      <About />
       <Stats />
+      <About />
+      <Highlights />
+     
       <Faculty />
       <CTA />
     </main>

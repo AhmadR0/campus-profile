@@ -1,0 +1,127 @@
+{
+  "Dosen": [
+    {
+      "Nama": "ENGGAR, SST., M.Keb.",
+      "Picture": "/assets/Picture",
+      "NUPTK": "5347766667230283",
+      "TTL": "Rappang, 15 Oktober 1988",
+      "Jabatan": "Direktur",
+      "Agama": "Islam"
+    },
+    {
+      "Nama": "NI MADE ROSIYANA, S.ST., M.Keb",
+      "Picture": "/assets/Picture",
+      "NUPTK": "4342768669231093",
+      "TTL": "Balinggi, 10 Oktober 1990",
+      "Jabatan": "Wakil Direktur I",
+      "Agama": "Kristen"
+    },
+    {
+      "Nama": "SRIVENTI LESTARI, S.Tr.Keb.,MKM",
+      "Picture": "/assets/Picture",
+      "NUPTK": "Wakil Direktur II",
+      "TTL": "Ampibabo, 13 Oktober 1993",
+      "Jabatan": "Direktur",
+      "Agama": "Islam"
+    },
+    {
+      "Nama": "Andi,S.Kes,.MARS",
+      "Picture": "/assets/Picture",
+      "NUPTK": "Wakil Direktur III",
+      "TTL": "Ampibabo, 13 Oktober 1993",
+      "Jabatan": "Direktur",
+      "Agama": "Islam"
+    },
+    {
+      "Nama": "FREDERICK, M.A.P,S.K.M.,A.Md.PK",
+      "Picture": "/assets/Picture",
+      "NUPTK": "9553745646130052",
+      "TTL": "Donggala, 01 Januari 1970",
+      "Jabatan": "Kaprodi DIV Rekam Medis",
+      "Agama": "Kristen"
+    },
+    {
+      "Nama": "SLAMET IFANDI",
+      "Picture": "/assets/Picture",
+      "NUPTK": "1063768669130263",
+      "TTL": "Palu, 31 Juli 1990",
+      "Jabatan": "Kaprodi DIV Teknologi Laboratorium Medis",
+      "Agama": "Islam"
+    }
+  ],
+  "Content": {
+    "Berita": {
+      "teckline": "",
+      "picture": "",
+      "Date": "",
+      "desc": ""
+    },
+    "Statistik": {
+      "Total Mahasiswa": "",
+      "Prodi": "",
+      "dosen": "",
+      "Alumni": ""
+    },
+    "Profile Program Studi Kebidanan": {
+      "Profile": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "deskripsi": "",
+      "Visi": "Menjadi politeknik yang inovatif dan memiliki integrasi keilmuan dalam pengembangan vokasi di Sulawesi Tengah tahun 2035",
+      "Misi": [
+        "Menyelenggarakan pendidikan tinggi yang inovatif dan memiliki integrasi keilmuan dalam pengembangan vokasi.",
+        "Melaksanakan penelitian yang bermanfaat bagi pengembangan ilmu vokasi",
+        "Melaksanakan pengabdian kepada masyarakat dalam lingkup ilmu vokasi yang bermanfaat bagi masyarakat",
+        "Menjalin kerjasama yang saling menguntungkan dengan pemangku kepentingan dalam meningkatkan Tridarma perguruan tinggi lokal, regional, dan nasional."
+      ],
+      "Picture": ""
+    },
+    "Profile Program Studi Manajemen Informasi Kesehatan": {
+      "Profile": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "deskripsi": "",
+      "Visi": "Menjadi politeknik yang inovatif dan memiliki integrasi keilmuan dalam pengembangan vokasi di Sulawesi Tengah tahun 2035",
+      "Misi": [
+        "Menyelenggarakan pendidikan tinggi yang inovatif dan memiliki integrasi keilmuan dalam pengembangan vokasi.",
+        "Melaksanakan penelitian yang bermanfaat bagi pengembangan ilmu vokasi",
+        "Melaksanakan pengabdian kepada masyarakat dalam lingkup ilmu vokasi yang bermanfaat bagi masyarakat",
+        "Menjalin kerjasama yang saling menguntungkan dengan pemangku kepentingan dalam meningkatkan Tridarma perguruan tinggi lokal, regional, dan nasional."
+      ],
+      "Picture": ""
+    },
+    "Profile Program Studi Teknologi Laboratorium Medis": {
+      "Profile": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "deskripsi": "",
+      "Visi": "Menjadi politeknik yang inovatif dan memiliki integrasi keilmuan dalam pengembangan vokasi di Sulawesi Tengah tahun 2035",
+      "Misi": [
+        "Menyelenggarakan pendidikan tinggi yang inovatif dan memiliki integrasi keilmuan dalam pengembangan vokasi.",
+        "Melaksanakan penelitian yang bermanfaat bagi pengembangan ilmu vokasi",
+        "Melaksanakan pengabdian kepada masyarakat dalam lingkup ilmu vokasi yang bermanfaat bagi masyarakat",
+        "Menjalin kerjasama yang saling menguntungkan dengan pemangku kepentingan dalam meningkatkan Tridarma perguruan tinggi lokal, regional, dan nasional."
+      ],
+      "Picture": ""
+    },
+    "Profile Kampus": {
+      "Profile": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "Pimpinan POLCEN": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+      "Sejarah": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "visi": "Menjadi politeknik yang inovatif dan memiliki integrasi keilmuan dalam pengembangan vokasi di Sulawesi Tengah tahun 2035",
+      "Misi": [
+        "Menyelenggarakan pendidikan tinggi yang inovatif dan memiliki integrasi keilmuan dalam pengembangan vokasi.",
+        "Melaksanakan penelitian yang bermanfaat bagi pengembangan ilmu vokasi",
+        "Melaksanakan pengabdian kepada masyarakat dalam lingkup ilmu vokasi yang bermanfaat bagi masyarakat",
+        "Menjalin kerjasama yang saling menguntungkan dengan pemangku kepentingan dalam meningkatkan Tridarma perguruan tinggi lokal, regional, dan nasional."
+      ],
+      "Legalitas": "Politeknik ini bernama Politeknik Cendrawasih Palu. Politeknik ini berkedudukan di Kota Palu, Provinsi Sulawesi Tengah, Indonesia Politeknik ini, Berdasarkan Surat Keputusan Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia No.15/D/OT/2023 tanggal 4 Januari 2023 tentang izin perubahan bentuk Akademi Kebidanan Palu Sulawesi Tengah Menjadi Politeknik Cendrawasih Palu di Kota Palu Provinsi Sulawesi Tengah yang diselenggarakan oleh Yayasan Pendidikan Cendrawasih, Akademi Kebidanan Palu Sulawesi Tengah berubah bentuk menjadi Politeknik Cendrawasih Palu dengan menambah 2 prodi baru. Total program studi yang berdiri dibawah Politeknik Cendrawasih Palu sebanyak 3 prodi yang terdiri dari Diploma III Kebidanan, Diploma IV Teknologi Laboratorium Medis, dan Diploma IV Manajemen Informasi Kesehatan."
+    }
+  },
+  "Data Profile": {
+    "Profil": {
+      "Kode PTS": "165004",
+      "Akreditasi": "Sangat Baik",
+      "SK Akreditasi": "2596/SK/BAN-PT/Ak/PT/VIII/2025",
+      "Tanggal akreditasi": "2025-08-19",
+      "Alamat perguruan Tinggi": "Jln.Cendrawasih No 44 Palu",
+      "Alamat Email": "politeknikcendrawasih44@gmail.com",
+      "Website": "https://cendrawasih.ac.id"
+    },
+    "Catatan": "perubahan data profile dosen, (nama, dan ibu kandung,) tidak bisa di ajukan karena ada masalah di server sister apakah benar dan bagaimana solusinya?"
+  }
+}

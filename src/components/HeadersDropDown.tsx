@@ -51,12 +51,19 @@ export const DropDown = ({ hoverValue, anchorRef }: Param) => {
   const isCategorized = typeof items === "object" && !Array.isArray(items);
 
   // Hitung posisi default (untuk kategori -> mega menu di tengah)
-  const megaMenuStyle: React.CSSProperties = {
-    left: "50%",
-    transform: "translateX(-50%)",
-    marginTop: "0.5rem",
-    top:'70%'
-  };
+  const megaMenuStyle: React.CSSProperties = anchorRef?.current
+  ? {
+      position: "absolute",
+      left: "50%",
+      top: anchorRef.current.offsetHeight + 8, // pas di bawah nav
+      transform: "translateX(-50%)",
+    }
+  : {
+      position: "absolute",
+      left: "50%",
+      top: "100%",
+      transform: "translateX(-50%)",
+    };
 
   // Kalau ada anchorRef, taro di bawah nav terkait
   const simpleMenuStyle: React.CSSProperties = anchorRef?.current
@@ -65,7 +72,7 @@ export const DropDown = ({ hoverValue, anchorRef }: Param) => {
       return {
         position: "fixed",
         top: rect.bottom + 8, // 8px di bawah anchor
-        left: rect.left,
+        left: rect.left - 10,
       };
     })()
   : megaMenuStyle;

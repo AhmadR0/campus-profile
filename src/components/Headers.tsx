@@ -8,6 +8,11 @@ export const HeaderMain = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     // const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
     const [hoverValue, setHoverValue] = useState<string | null>(null);
+    const closeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+
+
+
     const anchorRefs: Record<string, React.RefObject<HTMLAnchorElement | null>> = {
         profile: useRef<HTMLAnchorElement | null>(null),
         faculties: useRef<HTMLAnchorElement | null>(null),
@@ -26,6 +31,22 @@ export const HeaderMain = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+
+    const handleMouseEnter = (key: string) => {
+        if (closeTimeout.current) {
+            clearTimeout(closeTimeout.current);
+            closeTimeout.current = null;
+        }
+        setHoverValue(key);
+    };
+
+    const handleMouseLeave = () => {
+        // kasih delay sebelum nutup dropdown
+        closeTimeout.current = setTimeout(() => {
+            setHoverValue(null);
+        }, 300); // delay 300ms
+    };
 
     return (
         <header
@@ -52,11 +73,7 @@ export const HeaderMain = () => {
 
             {/* Navigation (Center) */}
             <nav className="flex-1 flex justify-center relative">
-                <div
-                    className={`${
-                        isMobileMenuOpen ? "block" : "hidden"
-                    } md:flex md:space-x-6 p-4 md:p-0`}
-                >
+                <div className={`${isMobileMenuOpen ? "block" : "hidden"} md:flex md:space-x-6 p-4 md:p-0`}>
                     {[
                         { key: "profile", label: "Profil" },
                         { key: "faculties", label: "Fakultas" },
@@ -66,27 +83,30 @@ export const HeaderMain = () => {
                         { key: "study", label: "Kuliah di UIN" },
                         { key: "agenda", label: "Agenda" },
                     ].map(({ key, label }) => (
-                        <a
+                        <div
                             key={key}
-                            ref={anchorRefs[key]}
-                            href="#"
-                            className="text-white hover:text-stone-300 transition-colors block md:inline-block"
-                            onMouseEnter={() => setHoverValue(key)}
-                            onMouseLeave={() => setHoverValue(null)}
+                            onMouseEnter={() => handleMouseEnter(key)}
+                            onMouseLeave={handleMouseLeave}
+                            className="relative"
                         >
-                            {label}
-                        </a>
+                            <a
+                                ref={anchorRefs[key]}
+                                href="#"
+                                className="text-white hover:text-stone-300 transition-colors block md:inline-block"
+                            >
+                                {label}
+                            </a>
+
+                            {hoverValue === key && (
+                                <DropDown
+                                    hoverValue={hoverValue}
+                                    anchorRef={anchorRefs[hoverValue]}
+                                />
+                            )}
+                        </div>
                     ))}
                 </div>
             </nav>
-
-
-            {hoverValue && (
-                <DropDown
-                    hoverValue={hoverValue}
-                    anchorRef={anchorRefs[hoverValue]}
-                />
-            )}
 
             {/* Search & Language Icons (Right) */}
             <div className="flex items-center space-x-4 p-4">

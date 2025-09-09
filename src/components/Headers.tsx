@@ -50,23 +50,24 @@ export const HeaderMain = () => {
 
     return (
         <header
-            className={`fixed flex items-center w-full top-0 left-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black' : 'bg-transparent'
-                }`}
+            className={`fixed flex items-center w-full top-0 left-0 z-50 transition-all duration-500 ease-in-out ${
+    isScrolled ? 'bg-black/80 backdrop-blur-sm' : 'bg-transparent'
+  }`}
         >
             {/* Logo Section (Left) */}
             <div className="flex items-center space-x-2 p-4">
                 <img
                     src={logo}
                     alt="Logo"
-                    width={40}
-                    height={40}
+                    width={72}
+                    height={72}
                     className="object-contain"
                 />
                 <img
                     src={logoYayasan}
                     alt="Yayasan Logo"
-                    width={30}
-                    height={30}
+                    width={50}
+                    height={50}
                     className="object-contain"
                 />
             </div>
@@ -110,10 +111,15 @@ export const HeaderMain = () => {
 
             {/* Search & Language Icons (Right) */}
             <div className="flex items-center space-x-4 p-4">
-                <button className="text-white hover:text-stone-300 transition-colors">
+                <button 
+                className="text-white hover:text-stone-300 transition-colors"
+                onClick={()=>{console.log('YAAAAK')}}
+                
+                >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
+                    
                 </button>
                 <button className="text-white hover:text-stone-300 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

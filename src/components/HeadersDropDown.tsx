@@ -81,6 +81,8 @@ export const DropDown = ({ hoverValue, anchorRef }: Param) => {
     <div
       className={`
         absolute bg-white text-black p-4 rounded-md shadow-lg z-50
+      transform transition-all duration-300 ease-out
+      ${hoverValue ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'}
       `}
       style={isCategorized ? megaMenuStyle : simpleMenuStyle}
     >

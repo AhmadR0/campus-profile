@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/Baground.jpg";
+import backgroundImage from "../assets/IMG-20230127-WA0014.jpg";
 
 export default function Hero() {
   return (

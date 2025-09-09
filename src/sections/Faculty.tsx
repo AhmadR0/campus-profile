@@ -1,10 +1,12 @@
+import satu from '../assets/dosen/Baground.jpg'
+
 export default function Faculty() {
   const staff = [
     {
       name: "Dr. Andi Pratama",
       role: "Dosen Kebidanan",
       field: "Program Studi S1 Kebidanan",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJuy5Qo6a4S6VV_v3reyKJklcmhjGQFe5n4Q&s",
+      image: satu,
     },
     {
       name: "Prof. Siti Rahmawati",
@@ -43,7 +45,7 @@ export default function Faculty() {
                 alt={person.name}
                 className="w-28 h-28 rounded-full mx-auto mb-4 object-cover"
               />
-              <h3 className="text-xl font-semibold">{person.name}</h3>
+              <h3 className="text-xl text-black font-semibold">{person.name}</h3>
               <p className="text-sm text-black">{person.role}</p>
               <p className="text-sm text-gray-600 mt-1">{person.field}</p>
             </div>

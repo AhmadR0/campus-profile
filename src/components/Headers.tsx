@@ -1,12 +1,22 @@
 import logo from '../assets/logo.png';
 import logoYayasan from '../assets/Logo_Yayasan.png';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { DropDown } from './HeadersDropDown';
 
 export const HeaderMain = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+    // const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
+    const [hoverValue, setHoverValue] = useState<string | null>(null);
+    const anchorRefs: Record<string, React.RefObject<HTMLAnchorElement | null>> = {
+        profile: useRef<HTMLAnchorElement | null>(null),
+        faculties: useRef<HTMLAnchorElement | null>(null),
+        institutions: useRef<HTMLAnchorElement | null>(null),
+        bureau: useRef<HTMLAnchorElement | null>(null),
+        informationSystems: useRef<HTMLAnchorElement | null>(null),
+        study: useRef<HTMLAnchorElement | null>(null),
+        agenda: useRef<HTMLAnchorElement | null>(null),
+    };
 
 
     useEffect(() => {
@@ -42,71 +52,39 @@ export const HeaderMain = () => {
 
             {/* Navigation (Center) */}
             <nav className="flex-1 flex justify-center relative">
-                <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:flex md:space-x-6 p-4 md:p-0`}>
-                    <a
-                        href="#"
-                        className="text-white hover:text-stone-300 transition-colors block md:inline-block"
-                        onMouseEnter={() => setHoveredMenu("profile")}
-                        onMouseLeave={() => setHoveredMenu(null)}
-                    >
-                        Profil
-                    </a>
-                    <a
-                        href="#"
-                        className="text-white hover:text-stone-300 transition-colors block md:inline-block"
-                        onMouseEnter={() => setHoveredMenu("faculties")}
-                        onMouseLeave={() => setHoveredMenu(null)}
-                    >
-                        Fakultas
-                    </a>
-                    <a
-                        href="#"
-                        className="text-white hover:text-stone-300 transition-colors block md:inline-block"
-                        onMouseEnter={() => setHoveredMenu("institutions")}
-                        onMouseLeave={() => setHoveredMenu(null)}
-                    >
-                        Lembaga
-                    </a>
-                    <a
-                        href="#"
-                        className="text-white hover:text-stone-300 transition-colors block md:inline-block"
-                        onMouseEnter={() => setHoveredMenu("bureau")}
-                        onMouseLeave={() => setHoveredMenu(null)}
-                    >
-                        Biro
-                    </a>
-                    <a
-                        href="#"
-                        className="text-white hover:text-stone-300 transition-colors block md:inline-block"
-                        onMouseEnter={() => setHoveredMenu("informationSystems")}
-                        onMouseLeave={() => setHoveredMenu(null)}
-                    >
-                        Sistem Informasi
-                    </a>
-                    <a
-                        href="#"
-                        className="text-white hover:text-stone-300 transition-colors block md:inline-block"
-                        onMouseEnter={() => setHoveredMenu("study")}
-                        onMouseLeave={() => setHoveredMenu(null)}
-                    >
-                        Kuliah di UIN
-                    </a>
-                    <a
-                        href="#"
-                        className="text-white hover:text-stone-300 transition-colors block md:inline-block"
-                        onMouseEnter={() => setHoveredMenu("agenda")}
-                        onMouseLeave={() => setHoveredMenu(null)}
-                    >
-                        Agenda
-                    </a>
+                <div
+                    className={`${
+                        isMobileMenuOpen ? "block" : "hidden"
+                    } md:flex md:space-x-6 p-4 md:p-0`}
+                >
+                    {[
+                        { key: "profile", label: "Profil" },
+                        { key: "faculties", label: "Fakultas" },
+                        { key: "institutions", label: "Lembaga" },
+                        { key: "bureau", label: "Biro" },
+                        { key: "informationSystems", label: "Sistem Informasi" },
+                        { key: "study", label: "Kuliah di UIN" },
+                        { key: "agenda", label: "Agenda" },
+                    ].map(({ key, label }) => (
+                        <a
+                            key={key}
+                            ref={anchorRefs[key]}
+                            href="#"
+                            className="text-white hover:text-stone-300 transition-colors block md:inline-block"
+                            onMouseEnter={() => setHoverValue(key)}
+                            onMouseLeave={() => setHoverValue(null)}
+                        >
+                            {label}
+                        </a>
+                    ))}
                 </div>
             </nav>
 
 
-            {hoveredMenu && (
+            {hoverValue && (
                 <DropDown
-                    hoverValue={hoveredMenu}
-                    style={{ top: '100%', left: '50%', transform: 'translateX(-50%)', marginTop: '0.5rem' }}
+                    hoverValue={hoverValue}
+                    anchorRef={anchorRefs[hoverValue]}
                 />
             )}
 

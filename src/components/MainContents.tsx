@@ -4,6 +4,7 @@ import CTA from "../sections/CTA";
 import About from "../sections/About";
 import Stats from "../sections/Stats";
 import Faculty from "../sections/Faculty";
+import News from "../sections/News";
 
 export default function MainContents() {
   return (
@@ -12,7 +13,7 @@ export default function MainContents() {
       <Stats />
       <About />
       <Highlights />
-     
+      <News />
       <Faculty />
       <CTA />
     </main>

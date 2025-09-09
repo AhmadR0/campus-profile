@@ -1,4 +1,3 @@
-
 export default function Highlights() {
   const highlights = [
     {
@@ -28,28 +27,37 @@ export default function Highlights() {
   ];
 
   return (
-    <section className="py-16 bg-black">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Latest Highlights
+    <section className="py-20 bg-black relative overflow-hidden">
+      {/* Background texture biar gak polos */}
+      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay" />
+
+      <div className="relative max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white tracking-wide">
+          Highlights <span className="text-red-500">Kampus</span>
         </h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {highlights.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition"
+              className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition"
             >
+              {/* Gambar dengan efek zoom */}
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-700"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">
+
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-90" />
+
+              {/* Konten */}
+              <div className="absolute bottom-0 p-6 text-left">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600">{item.description}</p>
+                <p className="text-gray-300 text-sm">{item.description}</p>
               </div>
             </div>
           ))}

@@ -5,7 +5,7 @@ type Param = {
 
 const menuItems = {
   profile: [
-    "Pimpinan",
+    "Pimpinan Polchen",
     "Sejarah Polchen",
     "Lambang",
     "Visi Misi & Tujuan",

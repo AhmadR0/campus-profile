@@ -27,37 +27,40 @@ export default function Highlights() {
   ];
 
   return (
-    <section className="py-20 bg-black relative overflow-hidden">
-      {/* Background texture biar gak polos */}
+    <section className="py-20 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+      {/* Background texture */}
       <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay" />
 
       <div className="relative max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white tracking-wide">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-14 text-white tracking-wide">
           Highlights <span className="text-red-500">Kampus</span>
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {highlights.map((item, index) => (
             <div
               key={index}
-              className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+              className="bg-gray-800/60 backdrop-blur-lg rounded-xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-700 transition group"
             >
-              {/* Gambar dengan efek zoom */}
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-700"
-              />
-
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-90" />
+              {/* Gambar */}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              </div>
 
               {/* Konten */}
-              <div className="absolute bottom-0 p-6 text-left">
-                <h3 className="text-xl font-semibold text-white mb-2">
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-red-500 transition">
                   {item.title}
                 </h3>
-                <p className="text-gray-300 text-sm">{item.description}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}

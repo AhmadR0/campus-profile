@@ -81,7 +81,7 @@ export const HeaderMain = () => {
                         { key: "institutions", label: "Lembaga" },
                         { key: "bureau", label: "Biro" },
                         { key: "informationSystems", label: "Sistem Informasi" },
-                        { key: "study", label: "Kuliah di UIN" },
+                        { key: "study", label: "Kuliah di Polchen" },
                         { key: "agenda", label: "Agenda" },
                     ].map(({ key, label }) => (
                         <div

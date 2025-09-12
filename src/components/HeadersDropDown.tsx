@@ -3,44 +3,76 @@ type Param = {
   anchorRef: React.RefObject<HTMLAnchorElement | null>;
 };
 
+import { Link } from "react-router-dom";
+
 const menuItems = {
   profile: [
-    "Pimpinan Polchen",
-    "Sejarah Polchen",
-    "Lambang",
-    "Visi Misi & Tujuan",
-    "Struktur Organisasi",
-    "Quality Assurance",
-    "Kerjasama Kemitraan",
-    "Dasar Hukum Pengelolaan",
-    "Pedoman dan Panduan Pengelolaan",
-    "Fasilitas Kampus",
-    "Peta Kampus"
+    { label: "Pimpinan Polchen", path: "/profile/pimpinan-polchen" },
+    { label: "Sejarah Polchen", path: "/profile/sejarah" },
+    { label: "Lambang", path: "/profil/lambang" },
+    { label: "Visi Misi & Tujuan", path: "/profil/visi-misi-tujuan" },
+    { label: "Struktur Organisasi", path: "/profil/struktur-organisasi" },
+    { label: "Quality Assurance", path: "/profil/quality-assurance" },
+    { label: "Kerjasama Kemitraan", path: "/profil/kerjasama-kemitraan" },
+    { label: "Dasar Hukum Pengelolaan", path: "/profil/dasar-hukum-pengelolaan" },
+    { label: "Pedoman dan Panduan Pengelolaan", path: "/profil/pedoman-dan-panduan-pengelolaan" },
+    { label: "Fasilitas Kampus", path: "/profil/fasilitas-kampus" },
+    { label: "Peta Kampus", path: "/profil/peta-kampus" }
   ],
-  faculties: ["Syariah dan Hukum", "Tarbiyah dan Keguruan", "Ushuluddin dan Filsafat"],
+  faculties: [
+    { label: "Syariah dan Hukum", path: "/fakultas/syariah-dan-hukum" },
+    { label: "Tarbiyah dan Keguruan", path: "/fakultas/tarbiyah-dan-keguruan" },
+    { label: "Ushuluddin dan Filsafat", path: "/fakultas/ushuluddin-dan-filsafat" }
+  ],
   institutions: {
-    LEMBAGA: ["Penjaminan Mutu", "Penelitian & Pengabdian Masyarakat"],
-    UPT: ["Pusat Teknologi Informasi dan Pangkalan Data", "Perpustakaan", "Pusat Bahasa"],
-    PUSAT: ["Pusat Studi Gender dan Anak", "Pusat Pengembangan Bisnis"],
-    LAINNYA: ["Satuan Pengawas Internal (SPI)", "International Office (IO)", "Pejabat Pengelola Informasi dan Dokumentasi (PPID)"]
+    LEMBAGA: [
+      { label: "Penjaminan Mutu", path: "/lembaga/penjaminan-mutu" },
+      { label: "Penelitian & Pengabdian Masyarakat", path: "/lembaga/penelitian-pengabdian-masyarakat" }
+    ],
+    UPT: [
+      { label: "Pusat Teknologi Informasi dan Pangkalan Data", path: "/upt/pusat-teknologi-informasi-dan-pangkalan-data" },
+      { label: "Perpustakaan", path: "/upt/perpustakaan" },
+      { label: "Pusat Bahasa", path: "/upt/pusat-bahasa" }
+    ],
+    PUSAT: [
+      { label: "Pusat Studi Gender dan Anak", path: "/pusat/pusat-studi-gender-dan-anak" },
+      { label: "Pusat Pengembangan Bisnis", path: "/pusat/pusat-pengembangan-bisnis" }
+    ],
+    LAINNYA: [
+      { label: "Satuan Pengawas Internal (SPI)", path: "/lainnya/satuan-pengawas-internal" },
+      { label: "International Office (IO)", path: "/lainnya/international-office" },
+      { label: "Pejabat Pengelola Informasi dan Dokumentasi (PPID)", path: "/lainnya/pejabat-pengelola-informasi-dan-dokumentasi" }
+    ]
   },
   bureau: {
-    AUPK:['Keungan','Kepegawaian','Perencanaan','Umum'],
-    AAKK:['Akademik','Kemahasiswaan','Kerjasama']
+    AUPK: [
+      { label: "Keungan", path: "/biro/aupk/keuangan" },
+      { label: "Kepegawaian", path: "/biro/aupk/kepegawaian" },
+      { label: "Perencanaan", path: "/biro/aupk/perencanaan" },
+      { label: "Umum", path: "/biro/aupk/umum" }
+    ],
+    AAKK: [
+      { label: "Akademik", path: "/biro/aakk/akademik" },
+      { label: "Kemahasiswaan", path: "/biro/aakk/kemahasiswaan" },
+      { label: "Kerjasama", path: "/biro/aakk/kerjasama" }
+    ]
   },
   informationSystems: [
-    "SIAKAD",
-    "SIMKEU",
-    "SIMPEG",
-    "SISTER"
+    { label: "SIAKAD", path: "/sistem-informasi/siakad" },
+    { label: "SIMKEU", path: "/sistem-informasi/simkeu" },
+    { label: "SIMPEG", path: "/sistem-informasi/simpeg" },
+    { label: "SISTER", path: "/sistem-informasi/sister" }
   ],
   study: [
-    "Program Studi",
-    "Beasiswa",
-    "Prosedur Pendaftaran",
-    "Biaya Pendidikan"
+    { label: "Program Studi", path: "/studi/program-studi" },
+    { label: "Beasiswa", path: "/studi/beasiswa" },
+    { label: "Prosedur Pendaftaran", path: "/studi/prosedur-pendaftaran" },
+    { label: "Biaya Pendidikan", path: "/studi/biaya-pendidikan" }
   ],
-  agenda: ["Kegiatan Kampus", "Kalender Akademik"]
+  agenda: [
+    { label: "Kegiatan Kampus", path: "/agenda/kegiatan-kampus" },
+    { label: "Kalender Akademik", path: "/agenda/kalender-akademik" }
+  ]
 };
 
 export const DropDown = ({ hoverValue, anchorRef }: Param) => {
@@ -52,13 +84,13 @@ export const DropDown = ({ hoverValue, anchorRef }: Param) => {
 
   // Hitung posisi default (untuk kategori -> mega menu di tengah)
   const megaMenuStyle: React.CSSProperties = anchorRef?.current
-  ? {
+    ? {
       position: "absolute",
       left: "50%",
       top: anchorRef.current.offsetHeight + 8, // pas di bawah nav
       transform: "translateX(-50%)",
     }
-  : {
+    : {
       position: "absolute",
       left: "50%",
       top: "100%",
@@ -67,15 +99,15 @@ export const DropDown = ({ hoverValue, anchorRef }: Param) => {
 
   // Kalau ada anchorRef, taro di bawah nav terkait
   const simpleMenuStyle: React.CSSProperties = anchorRef?.current
-  ? (() => {
+    ? (() => {
       const rect = anchorRef.current!.getBoundingClientRect();
       return {
         position: "fixed",
-        top: rect.bottom + 8, // 8px di bawah anchor
+        top: rect.bottom + 8, 
         left: rect.left - 10,
       };
     })()
-  : megaMenuStyle;
+    : megaMenuStyle;
 
   return (
     <div
@@ -97,11 +129,11 @@ export const DropDown = ({ hoverValue, anchorRef }: Param) => {
             <div key={category}>
               <h3 className="font-semibold text-sm mb-3 uppercase">{category}</h3>
               <ul className="space-y-2">
-                {(links as string[]).map((link, i) => (
+                {(links as { label: string, path: string }[]).map(({ label, path }, i) => (
                   <li key={i}>
-                    <a href="#" className="hover:text-blue-600 transition-colors">
-                      {link}
-                    </a>
+                    <Link to={path} className="hover:text-blue-600 transition-colors">
+                      {label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -110,11 +142,11 @@ export const DropDown = ({ hoverValue, anchorRef }: Param) => {
         </div>
       ) : (
         <ul className="space-y-2">
-          {(items as string[]).map((link, i) => (
+          {(items as { label: string, path: string }[]).map(({ label, path }, i) => (
             <li key={i}>
-              <a href="#" className="hover:text-blue-600 transition-colors">
-                {link}
-              </a>
+              <Link to={path} className="hover:text-blue-600 transition-colors">
+                {label}
+              </Link>
             </li>
           ))}
         </ul>

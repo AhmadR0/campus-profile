@@ -2,6 +2,7 @@ import logo from '../assets/logo.png';
 import logoYayasan from '../assets/Logo_Yayasan.png';
 import { useState, useEffect, useRef } from "react";
 import { DropDown } from './HeadersDropDown';
+import { Link } from 'react-router-dom';
 
 export const HeaderMain = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -50,9 +51,8 @@ export const HeaderMain = () => {
 
     return (
         <header
-            className={`fixed flex items-center w-full top-0 left-0 z-50 transition-all duration-500 ease-in-out ${
-    isScrolled ? 'bg-black/80 backdrop-blur-sm' : 'bg-transparent'
-  }`}
+            className={`fixed flex items-center w-full top-0 left-0 z-50 transition-all duration-500 ease-in-out ${isScrolled ? 'bg-black/80 backdrop-blur-sm' : 'bg-transparent'
+                }`}
         >
             {/* Logo Section (Left) */}
             <div className="flex items-center space-x-2 p-4">
@@ -90,13 +90,22 @@ export const HeaderMain = () => {
                             onMouseLeave={handleMouseLeave}
                             className="relative"
                         >
-                            <a
+                            <Link
+                                ref={anchorRefs[key]} // pakai as any kalau ada error type
+                                to={key === "profile" ? "/pimpinan-polchen" : "#"}
+                                className="text-white hover:text-stone-300 transition-colors block md:inline-block"
+                            >
+
+                                {label}
+                            </Link>
+                            {/* <a
                                 ref={anchorRefs[key]}
                                 href="#"
                                 className="text-white hover:text-stone-300 transition-colors block md:inline-block"
+                            // onClick={}
                             >
                                 {label}
-                            </a>
+                            </a> */}
 
                             {hoverValue === key && (
                                 <DropDown
@@ -111,15 +120,15 @@ export const HeaderMain = () => {
 
             {/* Search & Language Icons (Right) */}
             <div className="flex items-center space-x-4 p-4">
-                <button 
-                className="text-white hover:text-stone-300 transition-colors"
-                onClick={()=>{console.log('YAAAAK')}}
-                
+                <button
+                    className="text-white hover:text-stone-300 transition-colors"
+                    onClick={() => { console.log('YAAAAK') }}
+
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
-                    
+
                 </button>
                 <button className="text-white hover:text-stone-300 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

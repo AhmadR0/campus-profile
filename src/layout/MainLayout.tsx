@@ -1,41 +1,34 @@
-// import type { ReactNode } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { HeaderMain } from "../components/Headers";
 import Footers from "../components/Footers";
 import MainContents from "../components/MainContents";
 import PimpinanPolchen from "../components/headers/profile/PimpinanPolchen";
-// import { useState } from "react";
-
+import Sejarah from "../components/headers/profile/Sejarah";
+import UnderConstruction from "../components/headers/profile/404";
 
 export default function MainLayout() {
-  
-  // const [activePage,setActivePage] = useState<string>
-
-
-
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
       {/* Header */}
-        <HeaderMain />
+      <HeaderMain />
 
       {/* Content */}
       <div className="flex-1">
-        {/* <BrowserRouter> */}
-          <Routes>
-          <Route 
-            path="/" 
-            element={<MainContents />}
+        <Routes>
+          <Route path="/" element={<MainContents />} />
+
+          <Route
+            path="/profile/pimpinan-polchen"
+            element={<PimpinanPolchen />}
           />
-          
-          <Route 
-            path="/profile/pimpinan-polchen" 
-            element={<PimpinanPolchen />} 
-          />
+
+          <Route path="/profile/sejarah" element={<Sejarah />} />
+
+          {/* Semua path yang tidak cocok → fallback */}
+          <Route path="*" element={<UnderConstruction />} />
         </Routes>
-        {/* </BrowserRouter> */}
       </div>
-      {/* <MainContents /> */}
 
       {/* Footer */}
       <Footers />

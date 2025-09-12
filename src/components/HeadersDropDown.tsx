@@ -9,8 +9,8 @@ const menuItems = {
   profile: [
     { label: "Pimpinan Polchen", path: "/profile/pimpinan-polchen" },
     { label: "Sejarah Polchen", path: "/profile/sejarah" },
-    { label: "Lambang", path: "/profil/lambang" },
-    { label: "Visi Misi & Tujuan", path: "/profil/visi-misi-tujuan" },
+    { label: "Lambang", path: "/profile/lambang" },
+    { label: "Visi Misi & Tujuan", path: "/profile/visi-misi-tujuan" },
     { label: "Struktur Organisasi", path: "/profil/struktur-organisasi" },
     { label: "Quality Assurance", path: "/profil/quality-assurance" },
     { label: "Kerjasama Kemitraan", path: "/profil/kerjasama-kemitraan" },

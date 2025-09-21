@@ -1,5 +1,6 @@
 import logo from '../assets/logo.png';
 import logoYayasan from '../assets/Logo_Yayasan.png';
+import tutwuri from '../assets/tutwuri.svg'
 import { useState, useEffect, useRef } from "react";
 import { DropDown } from './HeadersDropDown';
 import { Link } from 'react-router-dom';
@@ -69,6 +70,13 @@ export const HeaderMain = () => {
                     width={50}
                     height={50}
                     className="object-contain"
+                />
+                <img
+                    src={tutwuri}
+                    alt="Yayasan Logo"
+                    width={50}
+                    height={50}
+                    className="object-contain ml-3"
                 />
             </div>
 

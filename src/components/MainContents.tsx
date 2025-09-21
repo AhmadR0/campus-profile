@@ -6,6 +6,7 @@ import Stats from "../sections/Stats";
 // import Faculty from "../sections/Faculty";
 import News from "../sections/News";
 import Leaders from "../sections/Leaders";
+import InformationSystems from "../sections/InformationSystem";
 
 export default function MainContents() {
   return (
@@ -16,7 +17,10 @@ export default function MainContents() {
       <Highlights />
       <News />
       <Leaders />
+      <InformationSystems />
       <CTA />
+      
+
     </main>
   );
 }

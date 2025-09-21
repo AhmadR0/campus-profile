@@ -84,8 +84,9 @@ export const HeaderMain = () => {
             <nav className="flex-1 flex justify-center relative">
                 <div className={`${isMobileMenuOpen ? "block" : "hidden"} md:flex md:space-x-6 p-4 md:p-0`}>
                     {[
+                        { key: "Home", label: "Home" },
                         { key: "profile", label: "Profil" },
-                        { key: "faculties", label: "Fakultas" },
+                        { key: "faculties", label: "Program Studi" },
                         { key: "institutions", label: "Lembaga" },
                         { key: "bureau", label: "Biro" },
                         { key: "informationSystems", label: "Sistem Informasi" },
@@ -100,7 +101,7 @@ export const HeaderMain = () => {
                         >
                             <Link
                                 ref={anchorRefs[key]} // pakai as any kalau ada error type
-                                to={key === "profile" ? "/pimpinan-polchen" : "#"}
+                                to={key === "Home" ? '/' : "#"}
                                 className="text-white hover:text-stone-300 transition-colors block md:inline-block"
                             >
 

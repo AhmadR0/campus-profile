@@ -6,28 +6,28 @@ export default function PimpinanPolchen() {
     window.scrollTo(0, 0);
   }, []);
 
-  const mantanDirektur = [
-    {
-      name: "Prof. Bambang Setiawan",
-      image: "https://randomuser.me/api/portraits/men/45.jpg",
-      periode: '2023-2024'
-    },
-    {
-      name: "Dr. Siti Haryati",
-      image: "https://randomuser.me/api/portraits/women/46.jpg",
-      periode: '2023-2024'
-    },
-    {
-      name: "Ir. Gunawan Putra",
-      image: "https://randomuser.me/api/portraits/men/47.jpg",
-      periode: '2023-2024'
-    },
-    {
-      name: "Dr. Laila Mutiara",
-      image: "https://randomuser.me/api/portraits/women/48.jpg",
-      periode: '2023-2024'
-    },
-  ];
+  // const mantanDirektur = [
+  //   {
+  //     name: "Prof. Bambang Setiawan",
+  //     image: "https://randomuser.me/api/portraits/men/45.jpg",
+  //     periode: '2023-2024'
+  //   },
+  //   {
+  //     name: "Dr. Siti Haryati",
+  //     image: "https://randomuser.me/api/portraits/women/46.jpg",
+  //     periode: '2023-2024'
+  //   },
+  //   {
+  //     name: "Ir. Gunawan Putra",
+  //     image: "https://randomuser.me/api/portraits/men/47.jpg",
+  //     periode: '2023-2024'
+  //   },
+  //   {
+  //     name: "Dr. Laila Mutiara",
+  //     image: "https://randomuser.me/api/portraits/women/48.jpg",
+  //     periode: '2023-2024'
+  //   },
+  // ];
 
   return (
     <div className="w-full">
@@ -81,60 +81,36 @@ export default function PimpinanPolchen() {
       </section>
 
       {/* === Section 3: Direktur === */}
-    <section className="h-screen bg-black text-white flex flex-col items-center justify-center px-10">
-  <div className="max-w-6xl grid md:grid-cols-2 gap-10 items-center pt-10">
-    {/* Foto Direktur */}
-    <div className="flex justify-center">
-      <img
-        src={direktur}
-        alt="Direktur"
-        className="w-[400px] h-[500px] object-cover rounded-lg shadow-lg"
-      />
-    </div>
+      <section className="h-screen bg-black text-white flex flex-col items-center justify-center px-10">
+        <div className="max-w-6xl grid md:grid-cols-2 gap-10 items-center pt-10">
+          {/* Foto Direktur */}
+          <div className="flex justify-center">
+            <img
+              src={direktur}
+              alt="Direktur"
+              className="w-[400px] h-[500px] object-cover rounded-lg shadow-lg"
+            />
+          </div>
 
-    {/* Deskripsi + Mantan Direktur */}
-    <div>
-      {/* Deskripsi Direktur */}
-      <div>
-        <h2 className="text-4xl font-bold mb-6">Direktur</h2>
-        <p className="text-gray-300 leading-relaxed">
-          <b>ENGGAR, SST., M.Keb.</b> adalah Direktur aktif Politeknik
-          Cenrawasih Palu. Dengan pengalaman lebih dari 20 tahun di bidang
-          pendidikan, beliau berkomitmen membawa kampus ini menuju standar
-          internasional melalui inovasi kurikulum dan penelitian terapan.
-        </p>
-      </div>
+          {/* Deskripsi + Mantan Direktur */}
+          <div>
+            {/* Deskripsi Direktur */}
+            <div>
+              <h2 className="text-4xl font-bold mb-6">Direktur</h2>
+              <p className="text-gray-300 leading-relaxed">
+                <b>ENGGAR, SST., M.Keb.</b> adalah Direktur aktif Politeknik
+                Cenrawasih Palu. Dengan pengalaman lebih dari 20 tahun di bidang
+                pendidikan, beliau berkomitmen membawa kampus ini menuju standar
+                internasional melalui inovasi kurikulum dan penelitian terapan.
+              </p>
+            </div>
 
-      {/* Mantan Direktur */}
-            <div className="mt-10">
-  <h3 className="text-lg font-semibold mb-4 text-gray-200">
-    Mantan Direktur
-  </h3>
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-    {mantanDirektur.map((m, i) => (
-      <div
-        key={i}
-        className="bg-white/5 rounded-md overflow-hidden shadow hover:shadow-md transition"
-      >
-        {/* Foto */}
-        <img
-          src={m.image}
-          alt={m.name}
-          className="w-full h-28 object-cover"
-        />
-        {/* Nama & Periode */}
-        <div className="p-3 text-center">
-          <h3 className="text-sm font-semibold text-white">{m.name}</h3>
-          <p className="text-xs text-gray-400">{m.periode}</p>
+            {/* Mantan Direktur */}
+           
+
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
     </div>
   );

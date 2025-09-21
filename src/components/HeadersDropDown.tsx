@@ -57,12 +57,6 @@ const menuItems = {
       { label: "Kerjasama", path: "/biro/aakk/kerjasama" }
     ]
   },
-  informationSystems: [
-    { label: "SIAKAD", path: "/sistem-informasi/siakad" },
-    { label: "SIMKEU", path: "/sistem-informasi/simkeu" },
-    { label: "SIMPEG", path: "/sistem-informasi/simpeg" },
-    { label: "SISTER", path: "/sistem-informasi/sister" }
-  ],
   study: [
     { label: "Program Studi", path: "/studi/program-studi" },
     { label: "Beasiswa", path: "/studi/beasiswa" },
